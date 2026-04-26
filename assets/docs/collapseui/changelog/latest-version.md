@@ -1,111 +1,21 @@
-### Collapse-UI: Celestial (v1.2) - Released!
-A full large update release of Collapse-UI with so many features to come! This combines all of the existing Celestial's updates into one big changelog! *For those who unaware, Celestial was a beta release with no public release except for those who in Arxance's Workstation discord server.*<br><br>
+### Collapse-UI: Celestial (v1.2.1) - Released!
+A hotfix and changes for Celestial.<br><br>
 
 > **What's New?**
-- Added Support `1.26.10` Update! - This means that settings and gameplay are also fully updated with more options.
-- Added a button that opens a social menu in Pause Screen.
-- ~~Added Material Theming System - **FOR LINUX WITH NOCTALIA SHELL ONLY!!! (More info at Q&A Section!)**~~
-  - Due to mojang breaking the Android x86_64 build(s) This system is canned as i made my move to windows so i can properly play the game.
-  - It will be released in forseenable future once I return to linux.
-- Added Animated Experience Bar.
-- Added Animated Bossbar and fully redesigned.
-- Added Permission button in Pause screen, only shows up when there's active scoreboard in the playerlist!
-- Optimized Settings screen, reduced by 20% loading time. However, may stutter in some cases.
-- Added new configurations for optimized settings and playerlist tab.
-- New UI designs that follows up modern style.
-- Improved several elements and better optimizations.
-- All experiment features are now out of the wild!
-- Added Animations as a configuration.
-- Pause screen got an upgrade!
-  - They're now animated and looks like old Collapse-UI!
-  - There will be a text that shows whenever if the game is paused or not.
-  - Few changes.
-- UI's structure has been changed.
-- Added 2 new configuration on about screen.
-- Replaced the UI default theme to Magenta.
-- Replaced "Magenta (Collapse-UI Alt)" theme to "Legacy Default" with old theme.
-- Legacy Screen Updated! - **This updates certain screens that will be usable via mod! (More info at Q&A Section!)**
-  - (*) Button stacking or list has animation disabled.
-  - Updated Play Screen *
-  - Updated Death Screen *
-- Added 1 New Layout's Configs!
-  - `$cuigv:EventButton` - Displays Event on Main Menu along with its notification.
-- Added 20 New Animation's Configs!
-  - `$cuigv:HotbarHighlightMainEasingIn` - Change Hotbar Highlight's Easing In.
-  - `$cuigv:HotbarHighlightMainEasingOut` - Change Hotbar Highlight's Easing Out
-  - `$cuigv:HotbarHighlightOpacityEasingIn` - Change Hotbar Highlight's Opacity Easing In.
-  - `$cuigv:HotbarHighlightOpacityEasingOut` - Change Hotbar Highlight's Opacity Easing Out.
-  - `$cuigv:ButtonAnimOffsetEasingIn` - Change Animated Button's Offset/Move Easing In.
-  - `$cuigv:ButtonAnimOffsetEasingOut` - Change Animated Button's Offset/Move Easing Out.
-  - `$cuigv:HudTooltipsMainEasing` - Change Hud/Gameplay's Tooltip Easing. 
-  - `$cuigv:HudTooltipsOpacityEasing` - Change Hud/Gameplay's Tooltip Opacity Easing.
-  - `$cuigv:ChatMainEasingIn` - Change Hud/Gameplay's Chat Message Easing In
-  - `$cuigv:ChatMainEasingOut` - Change Hud/Gameplay's Chat Message Easing Out.
-  - `$cuigv:ChatPileEasingIn` - Change Hud/Gameplay's Bottom Chat Message Easing In.
-  - `$cuigv:ChatPileEasingOut` - Change Hud/Gameplay's Bottom Chat Message Easing Out.
-  - `$cuigv:ScreenAnimMainEasingIn` - Change Screen Animation's Easing In.
-  - `$cuigv:ScreenAnimMainEasingOut` - Change Screen Animation's Easing Out.
-  - `$cuigv:ScreenAnimOpacityEasingIn` - Change Screen Animation's Opacity Easing In.
-  - `$cuigv:ScreenAnimOpacityEasingOut` - Change Screen Animation's Opacity Easing Out.
-  - `$cuigv:PlayerlistMenuEasingIn` - Change Playerlist Menu's Easing In.
-  - `$cuigv:PlayerlistMenuEasingOut` - Change Playerlist Menu's Easing Out.
-  - `$cuigv:ExtraMenuEasingIn` - Change Extra Menu's Easing In.
-  - `$cuigv:ExtraMenuEasingOut` - Change Extra Menu's Easing Out.
+- Added an additional tip in Extra Menu
+  - Collapse-UI are now best to use with Ore-UI remover.
+  - Tutorial should be in the official website.
+- Updated Play screen to include several new elements from other screens.
 
 > **What's Changed**
-- About UI screen are abandoned. Instead, It's now moved to **Settings Screen**!
-  - The Button are no longer exist in start menu.
-- Removed a `disable_toggle_filter_profanity` variable due to being a existance for everyone.
-- Changed certain offset layout on pause screen.
-- Player Profile button on main menu and pause screen will now show a hovered or pressed animation.
-  - Do note that: Text and stuff does not change color atm.
-- Removed "Recommended Texture Limit" setting due to this thing no longer exist.
-- All of UI files will now be .arxui format.
-- Optimized Settings screen, reduced by 20% loading time. However, may stutter in some cases.
-- By default, **Playerlist tab will be disabled due to people request.** - However, can be re-enabled via configuration!
-- Better optimizations and reduced ton of codes.
-- Buttons just got full rewrite, synced with legacy's button structure. therefore making both legacy (not animated) and current (animated) a same thing. I've also enchanced the button's animations too. but this comes a cost with certain elements being rewrote for this change.
-- Controller changes:
-  - The support of it has been extended due to button rewrite.
-  - Anything that makes button goes out of bound should now no longer exist, but this comes a cost with visuals being degraded in some screens.
-- Button's bubble text just got full rewrite too, this includes a new fading in and out animation and moving in expo easing.
-- The rounded brackets in configuration menu from "About UI" are now gray instead of full white.
-- All buttons with text bubbles has been updated.
-- Animation adjustments and ported over to animation file.
-- Due to several new workflow going on that i'm now using, All Collapse-UI's folders, files and assets will be moved to the new `Collapse-UI > '.arx-assets'` folder. **However, config customization's assets will remains unchanged for better accessibly.**
-- Due to Ore-UI changes, certain screens like **Play screen (World creation screen), Death screen and IP (Add a new server) screen** will be removed from the pack.
-- All theme should follow up the designed version.
-- Chat screen's features such as Autocorrection, History message and Command selectors are removed on Controller and Keyboard/Mouse due to several issues, at the same time. these features were designed for the mobile users as Controller/K&M already have these features, so they're unaffected in this change.
-- Hud statistics (Coords and Time played) will be temporarliy placed on top-right instead of bottom-right due to controller issue.
-- Texture redraw to buttons and sliders.
-- Settings toggles that has been toggled and dropdown toggles will have their background as accessibility.
-- All icons are now white instead of gray-ish due to theme related.
-- Scrolling backgrounds in the start button (will not be shown in this update due to "Classic Menu") should be corrected in terms of animations.
-- Moved The UI status from Extra Menu to About Screen just to make Extra Menu more cleaner.
-- Adjusted Some Layouts.
-- Improved Controller Support.
-- Adjusted the theme little bit.
-- Updated the configuration descriptions!
+- About Section's Icon in settings screen are updated.
+- Nearly all screens should have an updated controller tooltip.
+- Storage Section's button are now vertically buttons instead of horizontal due to mobile issues.
+- Removed Play button background.
+- Collapse-UI's version should be properly v1.2.1 instead of v1.0.
 
 > **Bug fixes —**
-- Fixed an issue where Vibrant Visuals are not being supported.
-- Fixed an crashing issue when pressing 'nobody' scoreboard player button.
-- Fixed Play button from start menu having button texture when it wasn't supposed to be, this causes certain devices able to see the button texture on image border.
-- Fixed Video settings section related that has a missing texts or strings.
-- Fixed certain issues with settings not centered properly.
-- Fixed several issues on chat screen where using a shortcut would make button flashing.
-- Fixed some crashes and performance improvements.
-- Fixed ALOT of content log errors.
-- Button layers should no longer look odd.
-- Fixed certain buttons having some animation issues.
-- Fixed a certain bug on server form rendering the buttons behind the panel.
-- Fixed dialog issue that causes some screen to have shadow misplacement or rather would not display whatsoever.
-- Fixed animation related issues that causes "bottom chat message" uses linear easing instead of intended easing.
-- Fixed some content log errors that occurs in-game.
-
-> **Website / Internal -**
-- Re-added Configuration tab with alot more info and useful tutorial.
-- Renamed `CollapseUI-Template_Config` directory and file to `CollapseUI-Config_Template`. along with file format (`.mcpack`) are now `.zip`.
-- Fixed some random letter on the top-left of the nagivate bar.
-- Fixed wrong links on Collapse-UI download links.
-- Fixed padding issues in the site.
+- Fixed an issue with storage section having a missing text.
+- Reduced a yellow mark in the pack.
+  - Do note that other error(s) are unfixable.
+- Fixed an animation issue that easing is somehow reversed.
