@@ -54,7 +54,6 @@ A full large update release of Collapse-UI with so many features to come! This c
 
 > **What's Changed**
 - About UI screen are abandoned. Instead, It's now moved to **Settings Screen**!
-  - The Button are no longer exist in start menu.
 - Removed a `disable_toggle_filter_profanity` variable due to being a existance for everyone.
 - Changed certain offset layout on pause screen.
 - Player Profile button on main menu and pause screen will now show a hovered or pressed animation.

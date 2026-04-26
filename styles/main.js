@@ -15,7 +15,7 @@ var socialMediaElement = `<br>
 document.getElementById("socialMediaFooter").innerHTML += socialMediaElement;
 
 var portifioTabElement = `
-    <a href="../../index.html"><img src="../../assets/logo_white.png" height="32px" title="Arxance's Portifio" style="image-rendering: pixelated;padding: 0 2px"></a>
+    <a href="/index.html"><img src="/assets/logo_white.png" height="32px" title="Arxance's Portifio" style="image-rendering: pixelated;padding: 0 2px"></a>
     <input type="checkbox" id="sidebar-active">
     <label for="sidebar-active" class="open-sidebar-button">
       <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
@@ -24,7 +24,7 @@ var portifioTabElement = `
     <div class="links-container">
       <label for="sidebar-active" class="close-sidebar-button">
         <SVG xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        <img src="../../assets/logo_white.png" height="30px" style="padding: 12px 0 0 12px;image-rendering: pixelatedn"> 
+        <img src="../../assets/logo_white.png" height="30px" style="padding: 12px 0 0 12px;image-rendering: pixelatedn">
       </label>
       <label class="home-link"></label>
       <a href="../../index.html">Main</a>
@@ -42,7 +42,7 @@ var collapseuiTabElement = `
     <div class="links-container">
       <label for="sidebar-active" class="close-sidebar-button">
         <SVG xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        <img src="../../assets/images/collapseui/collapseui_title.png" height="30px" style="padding: 12px 0 0 12px"> 
+        <img src="../../assets/images/collapseui/collapseui_title.png" height="30px" style="padding: 12px 0 0 12px">
       </label>
       <label class="home-link"></label>
       <a href="main.html">Main</a>
@@ -62,7 +62,7 @@ var devampedTabElement = `
     <div class="links-container">
       <label for="sidebar-active" class="close-sidebar-button">
         <SVG xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-        <img src="../../assets/images/devamped/devamped_title.png" height="30px" style="padding: 12px 0 0 12px; image-rendering: pixelated"> 
+        <img src="../../assets/images/devamped/devamped_title.png" height="30px" style="padding: 12px 0 0 12px; image-rendering: pixelated">
       </label>
       <label class="home-link"></label>
       <a href="main.html">Main</a>
@@ -70,14 +70,16 @@ var devampedTabElement = `
       <a href="changelog.html">Changelog</a>
       <pi class="close-sidebar-button">Devamped and this website created by ARXANCE (@Arcdustry on discord) under the GPL-3.0 license</pi>
     </div>`;
-document.addEventListener("DOMContentLoaded", function() {
-  if (document.getElementById("collapseuiTabElement")){
-    document.getElementById("collapseuiTabElement").innerHTML += collapseuiTabElement
-  } else
-  if (document.getElementById("devampedTabElement")){
-    document.getElementById("devampedTabElement").innerHTML += devampedTabElement
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("collapseuiTabElement")) {
+    document.getElementById("collapseuiTabElement").innerHTML +=
+      collapseuiTabElement;
+  } else if (document.getElementById("devampedTabElement")) {
+    document.getElementById("devampedTabElement").innerHTML +=
+      devampedTabElement;
   }
-  if (document.getElementById("portifioTabElement")){
-    document.getElementById("portifioTabElement").innerHTML += portifioTabElement
+  if (document.getElementById("portifioTabElement")) {
+    document.getElementById("portifioTabElement").innerHTML +=
+      portifioTabElement;
   }
-})
+});

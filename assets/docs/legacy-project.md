@@ -1,0 +1,1 @@
+The listed project(s) here are the legacy project that i've worked on. Unfortunately, they're inactive. therefore they won't be receiving updates, accepting bug fixes until it is necessary. They also won't have their own dedicated page but rather a direct link to a third-party sites such as Planetminecraft, Curseforge and Github.

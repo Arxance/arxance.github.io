@@ -1,4 +1,4 @@
-### Resources and how to
+### Modifying
 The left side before `:` is the config name, you don't need either modify and change them. it should be something like `"$cuigv:PrimanyColor"`. We'll call it **Config** for easier understanding.
 <br><br>
 The right side after `:` is a Value type cosponse to Value, Boolean, Color, ColorAdv and so on. This is where you'll be modify with. We'll call it **Value**. There's also `,` after the **Value**, ***Do not delete it whatsoever or the game may not launch.***
