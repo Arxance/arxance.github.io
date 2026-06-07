@@ -321,8 +321,79 @@ nav a:is(:link, :active, :visited).active {
 .padding-element {
     margin: 0 15%;
 }
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+  overflow: hidden;
+  animation: zoomIn 0.3s;
+  ;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.9);filter: blur(10px);}
+  to {transform: scale(1);}
+}
+@keyframes zoomOut {
+  from {transform: scale(1);}
+  to {transform: scale(0.9);}
+}
+@keyframes opacityOut {
+  from {opacity: 1;}
+  to {opacity: 0;filter: blur(10px)}
+}
+@keyframes opacityIn {
+  from {opacity: 0;filter: blur(10px)}
+  to {opacity: 1;}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  animation: opacityIn 0.2s;
+  
+}
+.modal {
+  animation: opacityOut 0.2s;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+}
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Caption of modal image */
+.caption {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  animation: opacityIn 0.25s;
+  font-family: kazesawa;
+}
 .image:hover,
-.screenshot:hover {
+.screenshot-grid img:hover {
     box-shadow:
         0 2px 20px rgba(0, 0, 0, 0.6),
         0 0 0px 2px rgba(255, 255, 255, 1);
@@ -330,12 +401,34 @@ nav a:is(:link, :active, :visited).active {
 .image:hover p {
     color: var(--text-color);
 }
-.screenshot {
-    border-radius: 8px;
+.screenshot-grid {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.screenshot-grid img {
+    border-radius: 20px;
     margin-top: 6px;
     margin-bottom: 6px;
     box-shadow: 0px 3px #4234507f;
     width: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.row {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+}
+.screenshot-preview {
+    border-radius: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    box-shadow: 0px 3px #4234507f;
+    width: 50%;
     position: relative;
     transition: 0.3s;
 }
@@ -452,6 +545,11 @@ nav a:is(:link, :active, :visited).active {
         #fff 0 -1px;
 }
 @media (max-width: 850px) {
+    .screenshot-grid {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
     .links-container {
         flex-direction: column;
         align-items: flex-start;
@@ -484,10 +582,10 @@ nav a:is(:link, :active, :visited).active {
         left: 0;
     }
     #sidebar-active:checked ~ #overlay {
-        transition: 0.5s ease-in-out;
+        transition: 0.2s ease-in-out;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(4px);
         width: 100%;
         position: fixed;
         top: 0;

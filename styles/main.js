@@ -28,6 +28,7 @@ var portifioTabElement = `
       </label>
       <label class="home-link"></label>
       <a href="../../index.html">Main</a>
+      <a href="../../projects/gallery.html">Gallery</a>
       <a href="../../projects/aboutme.html">About me</a>
       <a href="../../projects/qa.html">Q&A</a>
       <pi class="close-sidebar-button">This website created by ARXANCE (@Arcdustry on discord) under the GPL-3.0 license</pi>
@@ -83,3 +84,17 @@ document.addEventListener("DOMContentLoaded", function () {
       portifioTabElement;
   }
 });
+function openModal(modalId, caption) {
+  let modal = document.getElementById(modalId);
+  modal.style.display = "flex";
+  modal.classList.add("show");
+  let message = modal.querySelector(".caption");
+}
+function closeModal(modalId) {
+  let modal = document.getElementById(modalId);
+  modal.classList.remove("show");
+  setTimeout(function () {
+    modal.style.display = "none";
+    modal.querySelector(".caption");
+  }, 180);
+}
